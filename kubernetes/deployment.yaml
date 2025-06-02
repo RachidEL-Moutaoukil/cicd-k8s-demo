@@ -15,10 +15,10 @@ spec:
       spec:
         containers:
         - name: cicd-demo
-          image: ${DOCKER_USERNAME}/cicd-demo-app:${VERSION}
+          image: ${DOCKER_USERNAME}/cicd-demo-app:latest
           env:
           - name: VERSION
-            value: "${VERSION}"
+            value: "latest"
           ports:
           - containerPort: 3000
           resources:
