@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     res.send(`Hello Kubernetes  CI/CD! Version: ${version}`);
 });
 app.get('/health', (req, res) => {
-    res.status(200).send('OK');
+    res.status(200).send('cool');
 });
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
