@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
     res.status(200).send('good');
 });
+app.get('/test', (req, res) => {
+    res.status(200).send('test');
+});
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
