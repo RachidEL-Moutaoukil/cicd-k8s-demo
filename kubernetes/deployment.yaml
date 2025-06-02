@@ -8,19 +8,19 @@ spec:
   selector:
     matchLabels:
       app: cicd-demo
-    template:
-      metadata:
-        labels:
-          app: cicd-demo
-      spec:
-        containers:
+  template:  
+    metadata:
+      labels:
+        app: cicd-demo
+    spec:
+      containers:
         - name: cicd-demo
-          image: ${DOCKER_USERNAME}/cicd-demo-app:latest
+          image: ${DOCKER_USERNAME}/cicd-demo-app:${VERSION}
           env:
-          - name: VERSION
-            value: "latest"
+            - name: VERSION
+              value: "${VERSION}"
           ports:
-          - containerPort: 3000
+            - containerPort: 3000
           resources:
             limits:
               cpu: "0.2"
